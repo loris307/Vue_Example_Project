@@ -1,6 +1,6 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Reverser from './components/Reverser.vue';
+import Directives from './components/directives.vue'
 </script>
 
 <template>
@@ -13,7 +13,8 @@ import TheWelcome from './components/TheWelcome.vue'
   </header>
 
   <main>
-    <TheWelcome />
+    <!-- <Reverser /> -->
+     <Directives />
   </main>
 </template>
 
