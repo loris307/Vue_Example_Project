@@ -1,7 +1,7 @@
 <template>
 	<div>
 	  <p v-text="message"></p>
-	  <p v-bind:title="message">{{ message }}</p>
+	  <p v-bind:style="dynamicStyle">{{ message }}</p>
 	  <input v-model="message" />
 	  <p v-if="isVisible">This is visible!</p>
 	  <ul>
@@ -12,11 +12,18 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue';
+  import { ref, computed } from 'vue';
   
   const message = ref('Hello Vue.js!');
   const isVisible = ref(true);
   const items = ref(['Item 1', 'Item 2', 'Item 3']);
+  
+  // Dynamischer Style abhängig vom message-Wert
+  const dynamicStyle = computed(() => {
+	return {
+	  color: message.value.includes('Vue') ? 'green' : 'black',
+	};
+  });
   
   function toggleVisibility() {
 	isVisible.value = !isVisible.value;
