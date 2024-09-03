@@ -1,6 +1,7 @@
 <script setup>
 import Reverser from './components/Reverser.vue';
 import Directives from './components/directives.vue'
+import parentComponent from './components/parentComponent.vue';
 </script>
 
 <template>
@@ -14,7 +15,8 @@ import Directives from './components/directives.vue'
 
   <main>
     <!-- <Reverser /> -->
-     <Directives />
+     <!-- <Directives /> -->
+    <parentComponent />
   </main>
 </template>
 
